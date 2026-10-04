@@ -1,37 +1,32 @@
-# Pharmacy Database System
+# 💊 365 Pharmacy Management Database System
 
-## Overview
-This project presents a database design for a pharmacy management system, focusing on how data is structured and used to support basic business operations.
-
-The system manages core entities such as customers, orders, invoices, and drug inventory.
-
----
-## Database Design
-Main entities in the system include:
-- Customer  
-- Drug  
-- Order  
-- Invoice  
-
-See ERD diagram below:
-
-![ERD](ERD.png)
+> A relational database analysis, schema design, and SQL implementation project developed for a retail pharmaceutical enterprise.
 
 ---
 
-## My Contributions
-- Contributed to ERD design and database structure  
-- Wrote SQL queries for selected business cases  
-- Performed basic data insertion and handling  
-
-Details of these contributions are included in the project report.
-
----
-
-## Technologies
-- SQL (SQL Server)
+## 📌 Project Overview & Objectives
+- **Target System:** 365 Pharmacy Management System (Sun Pharma Joint Stock Company)
+- **Domain:** Pharmaceutical Retail & Supply Chain Operations
+- **System Objectives:**
+  - Standardize drug catalog management, batch numbers, stock levels, and expiration dates to prevent expired distribution and stockouts.
+  - Streamline point-of-sale dispensing and order processing, linking pharmacists, customers, multi-item prescriptions, and compliant electronic invoices.
+  - Establish a robust, normalized database structure to secure transaction integrity and automate historical data maintenance.
 
 ---
 
-## Note
-This project was developed as a group assignment.
+## 🛠️ Technologies Used
+- Microsoft SQL Server (SQL)
+---
+
+## 💼 My Personal Contributions
+
+### 1. Database Modeling & Schema Architecture
+- Participated in workflow analysis and co-designed the conceptual **Entity-Relationship Diagram (ERD)** across 7 core entities (`Customer`, `Pharmacist`, `Supplier`, `Drug`, `Order`, `OrderDrug`, `Invoice`).
+- Derived a **3NF-normalized Relational Schema**, defining primary keys, composite keys, and foreign key relationships to prevent redundancy and update anomalies.
+
+### 2. SQL Implementation & Business Solutions
+Directly authored, tested, and executed SQL queries and scripts addressing core business rules:
+- **Conditional Stock Verification:** Utilized `CASE WHEN` to evaluate stock levels and enforce safety buffer thresholds before order confirmation.
+- **Defensive Data Insertion:** Applied `WHERE NOT EXISTS` clauses to ensure safe product additions without duplicate records or primary key collision errors.
+- **Automated Data Retention & Lifecycle:** Formulated queries combining `DATEADD` and `GETDATE` to purge legacy transactional invoices older than two years, maintaining system performance and storage efficiency.
+
